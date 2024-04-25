@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Sejam Bem-vindo a Nosso Projeto MVC</h1>
+    <p>Aprenda Sobre <a href="https://docs.microsoft.com/aspnet/core">Contruir uma Web apps com ASP.NET Core</a>.</p>
+    <p>Acessar Google <a href="https://www.google.com.br/"> Para fazer qualquer pesquisa</a>.
+    @Html.ActionLink("Privacy","Privacy","Home")
+    </p>
+    <br />
+    @Html.ActionLink("Produto","index","Produto")
+    <h1 class="display-4">@ViewBag.Canal</h1>
+</div>

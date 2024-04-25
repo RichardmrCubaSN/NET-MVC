@@ -1,0 +1,32 @@
+﻿@model ProdutoViewModel
+@{
+    ViewData["Title"] = "Novo Produto";
+}
+<h1>@ViewData["Title"]</h1>
+ <div>
+    <label>Novo Produtos</label>
+    @using(Html.BeginForm("Novo","Produto",FormMethod.Post))
+    {
+      <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th colspan="2" align="center">Detalhes do Produto</th>
+        </tr>
+        <tr>
+            <td>ID: </td>
+            <td>
+               @Html.TextBoxFor(model => model.Id) 
+            </td>
+        </tr>
+        <tr>
+            <td>Descrição: </td>
+            <td>
+              @Html.TextBoxFor(model => model.Descricao) 
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Confirmar" /></td>
+        </tr>
+      </table>
+    }
+</div>

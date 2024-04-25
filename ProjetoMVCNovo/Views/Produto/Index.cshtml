@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNetCore.Mvc.Razor.Internal;
+@using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
+@{
+    ViewData["Title"] = "Produtos";
+}
+<h1>@ViewData["Title"]</h1>
+
+@model List<ProdutoViewModel>
+    
+<div>
+    <label>Novo Produtos</label>
+    
+    @Html.ActionLink("Novo Produto","Novo","Produto");
+
+    @foreach(var produtos in Model)
+    {
+        <ul>
+            <li>@produtos.Descricao</li>
+        </ul>
+    }
+</div>
